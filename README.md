@@ -31,27 +31,34 @@ It contains information on median house values, population, income, and other fe
 
 ---
 
-## S Setup Instructions
+## Setup Instructions
 
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/sjsu-cs133-f25/team8-california-housing.git
 cd team8-california-housing
+```
+### 2. Create a Virtual Environment
+```bash
 
-### Create a Virtual Environment
 python3 -m venv .venv
 
 # activate it
+
 # Mac/Linux
 source .venv/bin/activate
 # Windows
 .venv\Scripts\activate
-
-### 3.nInstall Dependeniesnstall Dependencies
+```
+### 3. Install Dependeniesnstall Dependencies
+```bash
 pip install -r requirements.txt
+```
 
 ### 4.  Download the Dataset
+```bash
 pip install kaggle
+
 
 # download dataset into data/ folder
 kaggle datasets download -d camnugent/california-housing-prices -p data
@@ -59,8 +66,10 @@ kaggle datasets download -d camnugent/california-housing-prices -p data
 # unzip and clean up
 unzip data/california-housing-prices.zip -d data
 rm data/california-housing-prices.zip
+```
 
-### 5. Add to .gitignore
+### 5. Add to .gitignore (we don't want to commit data files)
+```bash
 # Data files
 data/*.csv
 data/*.zip
@@ -74,6 +83,9 @@ __pycache__/
 
 # OS cruft
 .DS_Store
+```
 
 ### 6. Verify .gitignore status
+```bash
 git status
+```
