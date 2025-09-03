@@ -1,7 +1,7 @@
 # California Housing Prices — CS 133
 
 ## Team
-- Sidharth Krishnaswamy (@) (@)
+- Sidharth Krishnaswamy (@)
 - Rayhann Kwon (@)
 - Arthur Wong (@)
 - Andrian Than (@andrianthan)
