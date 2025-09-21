@@ -70,13 +70,11 @@ jupyter notebook california_housing_analysis.ipynb
 
 ```
 team8-california-housing/
-├── README.md                           # This file
-├── requirements.txt                    # Python dependencies
-├── california_housing_analysis.ipynb   # Main analysis notebook (ALL ARTIFACTS)
-├── CLAUDE.md                          # Project configuration
-├── .gitignore                         # Git ignore rules
+├── README.md                          
+├── requirements.txt                   
+├── california_housing_analysis.ipynb                        
 └── data/
-    └── download_instruction.md        # Alternative data source info
+    └── download_instruction.md        
 ```
 
 ---
