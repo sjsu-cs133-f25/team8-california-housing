@@ -1,91 +1,91 @@
-# California Housing Prices — CS 133
+# California Housing Prices Analysis — CS 133
+## Data Engineering Artifacts Project
 
-## Team
-- Sidharth Krishnaswamy (@)
-- Rayhann Kwon (@)
-- Arthur Wong (@)
-- Andrian Than (@andrianthan)
+### Team
+- Sidharth Krishnaswamy
+- Rayhann Kwon
+- Arthur Wong
+- Andrian Than
 - Professor: Jelena Gligorijevic
-
-## Dataset
-**Title:** California Housing Prices (1990 Census)  
-**Summary:** This project uses the **California Housing Prices (1990 Census Data)** dataset.  
-It contains information on median house values, population, income, and other features for California census tracts.  
-**Main columns:** longitude, latitude, housing_median_age, total_rooms, total_bedrooms, population, households, median_income, median_house_value, ocean_proximity.
-**Features include:**
-- `longitude`: How far west (negative is farther west)
-- `latitude`: How far north
-- `housing_median_age`: Median age of houses in the district
-- `total_rooms`: Total rooms per district
-- `total_bedrooms`: Total bedrooms per district
-- `population`: Population per district
-- `households`: Number of households
-- `median_income`: Median income in $10,000s
-- `median_house_value`: Median house value in USD
-- `ocean_proximity`: Location relative to the ocean
-
-## Repo Layout
-- `README.md` — this file
-- `data/download_instructions.md` — how to fetch the dataset
-- `.gitignore` — prevents data and temp files from being committed
 
 ---
 
-## Setup Instructions
+## Project Overview
 
-### 1. Clone the Repository
+This project demonstrates an analysis of the **California Housing Prices (1990 Census)** dataset. 
+
+- **Artifact A:** Data Card with comprehensive dataset documentation
+- **Artifact B:** Dataset transformation with new columns and missing data handling
+- **Artifact C:** Grouping, aggregation, and sorting operations with interpretations
+- **Artifact D:** Well-labeled visualizations (histograms and bar charts)
+- **Artifact E:** Reproducible analysis in a single Jupyter notebook
+
+## Dataset Information
+
+**Source:** California Housing Prices (1990 Census) 
+**Shape:** 20,640 census blocks x 9 original features
+**Geographic Coverage:** California, USA
+**Data Level:** Census block groups
+
+### Key Features:
+- `median_income`: Median household income 
+- `housing_median_age`: Median age of houses
+- `avg_rooms`: Average rooms per household
+- `avg_bedrooms`: Average bedrooms per household
+- `population`: Total population in block group
+- `avg_occupancy`: Average household size
+- `latitude`: Latitude coordinate (degrees)
+- `longitude`: Longitude coordinate (degrees)
+- `median_house_value`: Median house value (in $100,000s)
+
+---
+
+## Quick Start
+
+### 1. Clone and Setup Environment
 ```bash
 git clone https://github.com/sjsu-cs133-f25/team8-california-housing.git
 cd team8-california-housing
-```
-### 2. Create a Virtual Environment
-```bash
-
 python3 -m venv .venv
-
-# activate it
 
 # Mac/Linux
 source .venv/bin/activate
 # Windows
 .venv\Scripts\activate
 ```
-### 3. Install Dependeniesnstall Dependencies
+
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4.  Download the Dataset
+### 3. Run the Analysis
 ```bash
-pip install kaggle
-
-
-# download dataset into data/ folder
-kaggle datasets download -d camnugent/california-housing-prices -p data
-
-# unzip and clean up
-unzip data/california-housing-prices.zip -d data
-rm data/california-housing-prices.zip
+jupyter notebook california_housing_analysis.ipynb
 ```
 
-### 5. Add to .gitignore (we don't want to commit data files)
-```bash
-# Data files
-data/*.csv
-data/*.zip
+---
 
-# Python cache
-__pycache__/
-*.pyc
+## Repository Structure
 
-# Jupyter notebooks
-.ipynb_checkpoints/
-
-# OS cruft
-.DS_Store
+```
+team8-california-housing/
+├── README.md                           # This file
+├── requirements.txt                    # Python dependencies
+├── california_housing_analysis.ipynb   # Main analysis notebook (ALL ARTIFACTS)
+├── CLAUDE.md                          # Project configuration
+├── .gitignore                         # Git ignore rules
+└── data/
+    └── download_instruction.md        # Alternative data source info
 ```
 
-### 6. Verify .gitignore status
-```bash
-git status
-```
+---
+## Dependencies
+
+See `requirements.txt` for complete list. Key packages:
+- `pandas>=2.0.0` - Data manipulation
+- `numpy>=1.24.0` - Numerical computing
+- `matplotlib>=3.6.0` - Plotting
+- `seaborn>=0.12.0` - Statistical visualization
+- `scikit-learn>=1.3.0` - Dataset and utilities
+- `jupyter>=1.0.0` - Notebook environment
