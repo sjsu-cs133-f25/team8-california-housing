@@ -52,3 +52,5 @@ Thumbs.db
 temp_*.png
 temp_*.jpg
 temp_*.pdf
+# Embedded HTML dashboards (too large for GitHub)
+notebooks/*.html
