@@ -64,6 +64,9 @@ pip install -r requirements.txt
 jupyter notebook california_housing_analysis.ipynb
 ```
 
+### Launch Prediction Panel
+source .venv/bin/activate && panel serve prediction_app.py --show --port 5006
+
 ---
 
 ## Repository Structure
